@@ -2,7 +2,9 @@ from ClassAStar import ClassAStar
 from ClassCoordonne import ClassCoordonne
 class ClassAfficher(ClassAStar, ClassCoordonne):
     def __init__(self):
-        super().__init__()
+        #super().__init__()
+        ClassCoordonne.__init__(self)
+        ClassAStar.__init__(self)
         self.astar = ClassAStar()
         self.graphe = ClassCoordonne()
         self.start_city = 'Goma'
